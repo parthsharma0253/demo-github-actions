@@ -19,11 +19,5 @@ jobs:
           architecture: x64
           cache: maven
 
-      - name: PWD
-        run: pwd
-
-      # - name: Changing to backend project directory
-      #   run: cd demo
-
       - name: Building the application
-        run: mvn clean package -DskipTests
+        run: cd demo && mvn clean package -DskipTests
