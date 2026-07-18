@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  MAVEN_COMMAND: ${{ COMMAND_FOR_MAVEN }}
+  MAVEN_COMMAND: ${{ vars.COMMAND_FOR_MAVEN }}
 
 jobs:
   Backend-Building-JAR-File:
