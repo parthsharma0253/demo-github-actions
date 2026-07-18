@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+
+env:
+  MAVEN_COMMAND: ${{ COMMAND_FOR_MAVEN }}
+
 jobs:
   Backend-Building-JAR-File:
     runs-on: ubuntu-latest
@@ -20,4 +24,4 @@ jobs:
           cache: maven
 
       - name: Building the application
-        run: cd demo && mvn clean package -DskipTests
+        run: cd demo && $MAVEN_COMMAND
